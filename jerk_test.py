@@ -18,7 +18,15 @@ def jerk_hua(filename, samples = 200):
 	# plt.plot(data[:,1],color='g')
 	# plt.plot(data[:,2],color='b')
 	# plt.plot(resultant_acceleration,color='k')
-	plt.plot(data[:,0]/resultant_acceleration,'k')
+	
+
+	plt.plot(np.degrees(np.arccos(data[:,0]/resultant_acceleration)),'r')
+	plt.plot(np.degrees(np.arccos(data[:,1]/resultant_acceleration)),'g')
+	plt.plot(np.degrees(np.arccos(data[:,2]/resultant_acceleration)),'b')
+
+
+	# plt.plot(np.cos(np.arccos(data[:,2]/resultant_acceleration)),'k')
+
 	plt.show()
 	return
 	while(index<len(resultant_acceleration)):
